@@ -6,6 +6,14 @@ import static java.lang.Math.abs;
 
 public class Main {
 
+    public static void main (String[] args) {
+        Point p1 = readPoint("p1");
+        Point p2 = readPoint("p2");
+        Point p3 = readPoint("p3");
+        Point p4 = readPoint("p4");
+        System.out.printf(isParallelogram(p1, p2, p3, p4));
+    }
+
     private static String isParallelogram(Point p1,Point p2, Point p3, Point p4) {
         if ((Math.abs(p1.x - p2.x) == Math.abs(p3.x - p4.x)) && (Math.abs(p1.y - p2.y) == Math.abs(p3.y - p4.y))) {
             return "yes";
@@ -40,11 +48,4 @@ public class Main {
         return new Point (x, y);
     }
 
-    public static void main (String[] args) {
-        Point p1 = readPoint("p1");
-        Point p2 = readPoint("p2");
-        Point p3 = readPoint("p3");
-        Point p4 = readPoint("p4");
-        System.out.printf(isParallelogram(p1, p2, p3, p4));
-    }
 }
