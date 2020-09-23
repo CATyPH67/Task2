@@ -6,7 +6,6 @@ import static java.lang.Math.abs;
 
 public class Main
 {
-
     public static void main (String[] args)
     {
         Point p1 = readPoint("p1");
@@ -14,6 +13,17 @@ public class Main
         Point p3 = readPoint("p3");
         Point p4 = readPoint("p4");
         System.out.printf(isParallelogram(p1, p2, p3, p4));
+    }
+
+    private static class Point
+    {
+    private double x, y;
+
+    private Point (double x, double y)
+    {
+        this.x = x;
+        this.y = y;
+    }
     }
 
     private static String isParallelogram(Point p1,Point p2, Point p3, Point p4)
@@ -33,17 +43,6 @@ public class Main
         return "no";
     }
 
-    private static class Point
-    {
-        private double x, y;
-
-        private Point (double x, double y)
-        {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
     private static double readDouble (String name)
     {
         Scanner scanner = new Scanner(System.in);
@@ -57,5 +56,4 @@ public class Main
         double y = readDouble (name + ".y");
         return new Point (x, y);
     }
-
 }
