@@ -13,6 +13,4 @@ public class Main
         Point p4 = Program.readPoint("p4");
         System.out.printf(Program.isParallelogram(p1, p2, p3, p4));
     }
-
-
 }
