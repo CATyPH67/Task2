@@ -27,24 +27,11 @@ public class Main
         return scanner.nextDouble();
     }
 
-    public static String isParallelogram(Point p1, Point p2, Point p3, Point p4)
+    public static boolean isParallelogram(Point p1, Point p2, Point p3, Point p4)
     {
-        if (isParallel(p1, p2, p3, p4) && isParallel(p1, p3, p2, p4))
-        {
-            return "yes";
-        }
-
-        if (isParallel(p1, p3, p2, p4) && isParallel(p1, p4, p2, p3))
-        {
-            return "yes";
-        }
-
-        if (isParallel(p1, p4, p2, p3) && isParallel(p1, p2, p4, p3))
-        {
-            return "yes";
-        }
-
-        return "no";
+        return (isParallel(p1, p2, p3, p4) && isParallel(p1, p3, p2, p4))
+            || (isParallel(p1, p3, p2, p4) && isParallel(p1, p4, p2, p3))
+            || (isParallel(p1, p4, p2, p3) && isParallel(p1, p2, p4, p3));
     }
 
     public static boolean isParallel(Point p1, Point p2, Point p3, Point p4)
